@@ -45,6 +45,15 @@ RSpec.describe Alimento do
     expect(@alimento.fats).to eq(19.5)
   end
   
+  describe "# To string" do
+      
+    it "has to_s" do
+      expect(@alimento.to_s).to eq("#{@alimento.name}\tproteinas:#{@alimento.proteins}\tglúcidos:#{@alimento.glucids}\tlípidos:#{@alimento.fats}")
+    end
+  
+      
+  end
+  
   
     
   end
