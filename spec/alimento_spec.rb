@@ -4,8 +4,10 @@ require "./lib/alimento/alimento_.rb"
 RSpec.describe Alimento do
   
   before :all do
-    @alimento = Alimento_.new("Huevo frito")
+    @alimento = Alimento_.new()
   end
+  
+  
   
   it "# Food atributes" do
     
