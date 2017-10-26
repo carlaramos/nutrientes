@@ -7,9 +7,11 @@ RSpec.describe Alimento do
     @alimento = Alimento_.new()
   end
   
-  
-  
-  it "# Food atributes" do
+  describe "# Food atributes" do
+    
+    it "has a name" do
+      expect(@alimento.name).not_to be nil
+    end
     
   end
   
