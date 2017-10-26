@@ -16,4 +16,9 @@ class Alimento_
         puts string
         return string
     end
+    
+    def valor_energetico 
+        v_e = (@proteins*4)+(@glucids*4)+(@fats*9)
+    end
+    
 end 
