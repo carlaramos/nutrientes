@@ -13,6 +13,10 @@ RSpec.describe Alimento do
       expect(@alimento.name).not_to be nil
     end
     
+    it "has proteins" do
+      expect(@alimento.proteins).not_to be nil   
+    end 
+    
   end
   
   it "has a version number" do
