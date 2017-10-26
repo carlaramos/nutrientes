@@ -10,4 +10,10 @@ class Alimento_
         @glucids = glucids 
         @fats = fats
     end
+    
+    def to_s
+        string = ("#{@name}\tproteinas:#{@proteins}\tglúcidos:#{@glucids}\tlípidos:#{@fats}")
+        puts string
+        return string
+    end
 end 
