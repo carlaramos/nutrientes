@@ -1,35 +1,19 @@
-# Alimento
+# Práctica 6. Desarrollo dirigido por pruebas con Ruby
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/alimento`. To experiment with that code, run `bin/console` for an interactive prompt.
+## Carla Ramos Alonso
 
-TODO: Delete this and the text above, and describe your gem
+Práctica 6 de la asignatura de Lenguajes y paradigmas de la programación.
+Con dicha práctica hallaremos el valor energético de un alimento mendiante el uso de las siguientes herramientas:
 
-## Installation
+** - Bundler **
+** - Rspec ** 
 
-Add this line to your application's Gemfile:
+Usaremos el **desarrollo dirigido por pruebas**, que consiste en la definición de las pruebas, con el resultado que esperamos, y luego la implementación del mínimo código necesario para el éxito de la misma.
 
-```ruby
-gem 'alimento'
-```
+## Interpretación
 
-And then execute:
+Para la interpretación del programa debemos ejecutar la sentencia ~$ rake
 
-    $ bundle
+## Resultado
 
-Or install it yourself as:
-
-    $ gem install alimento
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/alimento.
+Huevo frito  Proteinas: 14.1    Glúcidos: 0.0   Lípidos: 19.5
