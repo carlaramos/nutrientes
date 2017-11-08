@@ -5,6 +5,7 @@ RSpec.describe Alimento do
   
   before :all do
     @alimento = Alimento_.new("Huevo frito", 14.1, 0.0, 19.5)
+    @huevo_frito = Grupo_alimento.new("Huevo frito", 14.1, 0.0, 19.5,"Huevos, lácteos y helados")
   end
   
   describe "# Food atributes" do
@@ -61,6 +62,13 @@ RSpec.describe Alimento do
       expect(@alimento.valor_energetico).to eq(231.9)
     end
 
+  end
+  
+  describe "# Object properties" do
+    
+    it "belongs to a class" do
+      expect(@huevo_frito.class).to eq(Grupo_alimento)
+    end
   end
   
   it "has a version number" do

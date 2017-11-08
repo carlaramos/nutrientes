@@ -13,8 +13,8 @@ class Alimento_
     
     def to_s
         string = ("#{@name}\tproteinas:#{@proteins}\tglúcidos:#{@glucids}\tlípidos:#{@fats}")
-        puts string
-        return string
+       # puts string
+       # return string
     end
     
     def valor_energetico 
@@ -22,3 +22,4 @@ class Alimento_
     end
     
 end 
+
