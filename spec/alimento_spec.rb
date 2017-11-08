@@ -69,6 +69,11 @@ RSpec.describe Alimento do
     it "belongs to a class" do
       expect(@huevo_frito.class).to eq(Grupo_alimento)
     end
+    
+    it "belongs to hierarchy" do 
+      expect(@huevo_frito.class.superclass). to eq(Alimento_)
+    end
+    
   end
   
   it "has a version number" do
