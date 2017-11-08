@@ -23,3 +23,18 @@ class Alimento_
     
 end 
 
+class Grupo_alimento < Alimento_
+    
+    attr_reader :grupo
+    
+    def initialize(name, proteins, glucids, fats, group)
+        super(name, proteins, glucids, fats)
+        @group = group
+    end
+    
+    def to_s
+        string = super.to_s "\tgrupo alimenticio:#{@group}"  
+        puts string
+        return string
+    end
+end
