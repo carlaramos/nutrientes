@@ -5,11 +5,11 @@ Node = Struct.new(:value, :next, :prev)
 
 class List 
     
-    attr_reader :first, :last
+    attr_reader :head, :tail
     
-    def initialize(first,last)
-        @first = first
-        @last = last
+    def initialize(head,tail)
+        @head = head
+        @tail = tail
     end
     
 end
