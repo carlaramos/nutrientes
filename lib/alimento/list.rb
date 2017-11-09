@@ -30,5 +30,10 @@ class List
         @head=@head.next
         @head.prev=nil
     end
+    
+    def shift_last
+        @tail=@tail.prev
+        @tail.next=nil
+    end
 
 end
