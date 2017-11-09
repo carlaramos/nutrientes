@@ -4,7 +4,7 @@ RSpec.describe List do
   
   describe "# List attributes" do
     
-    before :each do
+    before :all do
       @node1=Node.new(1,nil,nil)
       @node2=Node.new(2,nil,@node1)
       @node1.next=@node2
@@ -69,16 +69,20 @@ RSpec.describe List do
       expect(@list.tail.value).to eq(prueba2)
       expect(@list.head.value).to eq(prueba1)
     end
+  end
+  
+   describe " # Extract methods " do
+  
+    it " Extract the first element " do
+      @list = List.new(nil,nil)
+      alimento1=Grupo_alimento.new("Huevo frito",14.1,0.0,19.5,"Huevos, lácteos y helados")
+      alimento2=Grupo_alimento.new("Leche vaca",3.3,4.8,3.2,"Huevos, lácteos y helados")
+      @list.insert([alimento1,alimento2])
+      @list.shift_first
+      expect(@list.head.value).to eq(alimento2)
+    end  
     
   end
   
-  describe " # Extract methods " do
-  
-    it " Extract the first element " do
-      @list.shift_first
-      expect(@list.head.value).to eq(prueba3)
-    end
-  
-  end
 end
 
