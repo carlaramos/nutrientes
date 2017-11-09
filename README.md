@@ -1,19 +1,23 @@
-# Práctica 6. Desarrollo dirigido por pruebas con Ruby
+# Práctica 7. Listas doblemente enlazadas con Ruby
 
 ## Carla Ramos Alonso
 
-Práctica 6 de la asignatura de Lenguajes y paradigmas de la programación.
-Con dicha práctica hallaremos el valor energético de un alimento mendiante el uso de las siguientes herramientas:
+Práctica 7 de la asignatura de Lenguajes y paradigmas de la programación.
+Con dicha práctica haremos la implementación de una lista doblemente enlazada y la posterior inserción y eliminación de alimentos de la misma.
 
-** - Bundler **
-** - Rspec ** 
+Las herramientas que hemos usado para el desarrollo de la misma son las siguientes:
 
-Usaremos el **desarrollo dirigido por pruebas**, que consiste en la definición de las pruebas, con el resultado que esperamos, y luego la implementación del mínimo código necesario para el éxito de la misma.
+**  Bundler: ** Manejo de gemas
+**  Rspec: **   Desarrollo dirigido por pruebas
+**  Guard: **   Comprobación continua
+
+Usaremos la metodología del **desarrollo dirigido por pruebas**, que consiste en la definición de las pruebas, con el resultado que esperamos, y luego la implementación del mínimo código necesario para el éxito de la misma.
 
 ## Interpretación
 
-Para la interpretación del programa debemos ejecutar la sentencia ~$ rake
+Para la interpretación del programa tendremos tan solo que modificar los ficheros de pruebas o clicar enter en la consola con la ejecución de guard, ya que este nos permite ver la ejecución de las pruebas cada vez que estas se modifiquen.
 
 ## Resultado
 
-Huevo frito  Proteinas: 14.1    Glúcidos: 0.0   Lípidos: 19.5
+Se podrán insertar alimentos a la lista, y además extraer el primero o el último.
+El programa también hace uso de **herencia** con Ruby, de manera que los alimentos están clasificados por grupos de alimentos, que es una clase heredada de la clase alimento creada en las prácticas anteriores.
