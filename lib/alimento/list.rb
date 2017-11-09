@@ -12,7 +12,8 @@ class List
         @tail = tail
     end
     
-    def insert element
+    def insert vector
+        vector.each do |element|
             node = Node.new(element,nil,nil)
             if(@head==nil)
                 @head = node
@@ -22,5 +23,6 @@ class List
                 @tail.next = node
                 @tail=node
             end
+        end
     end
 end

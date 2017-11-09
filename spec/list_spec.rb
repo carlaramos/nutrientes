@@ -30,7 +30,7 @@ RSpec.describe List do
     end 
    
     it "can insert an element" do
-      @list.insert(@alimento)
+      @list.insert([@alimento])
       expect(@list.tail.value).to eq(@alimento)
     end
     
