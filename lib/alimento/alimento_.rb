@@ -33,8 +33,6 @@ class Grupo_alimento < Alimento_
     end
     
     def to_s
-        string = super.to_s "\tgrupo alimenticio:#{@group}"  
-        puts string
-        return string
+        string = super.to_s + "\tgrupo alimenticio:#{@group}"  
     end
 end

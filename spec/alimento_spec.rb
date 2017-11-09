@@ -49,8 +49,12 @@ RSpec.describe Alimento do
   
   describe "# To string" do
       
-    it "has to_s" do
+    it "Alimento_ has to_s" do
       expect(@alimento.to_s).to eq("#{@alimento.name}\tproteinas:#{@alimento.proteins}\tglúcidos:#{@alimento.glucids}\tlípidos:#{@alimento.fats}")
+    end
+    
+    it "Grupo_alimento has to_s" do 
+      expect(@huevo_frito.to_s).to eq("Huevo frito\tproteinas:14.1\tglúcidos:0.0\tlípidos:19.5\tgrupo alimenticio:Huevos, lácteos y helados")
     end
       
   end

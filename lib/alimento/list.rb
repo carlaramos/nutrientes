@@ -35,5 +35,15 @@ class List
         @tail=@tail.prev
         @tail.next=nil
     end
+    
+    def to_s
+        string=""
+        node=head
+        while node != nil do
+            string = string + node.value.to_s + "\n"
+            node = node.next
+        end
+        return string
+    end
 
 end

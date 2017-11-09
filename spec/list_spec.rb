@@ -68,6 +68,18 @@ RSpec.describe List do
       ])
       expect(@list.tail.value).to eq(prueba2)
       expect(@list.head.value).to eq(prueba1)
+      
+    end 
+    
+  end 
+  
+  describe " # To string" do
+    it " list has to_s" do
+      @list = List.new(nil,nil)
+      @list.insert([Grupo_alimento.new("Ternera",21.1,0.0,3.1,"Carnes y derivados"),
+        Grupo_alimento.new("Pollo",20.6,0.0,5.6,"Carnes y derivados"),
+        Grupo_alimento.new("Bacalao",17.7,0.0,0.4,"Pescados y mariscos")])
+      expect(@list.to_s).to eq("Ternera\tproteinas:21.1\tglúcidos:0.0\tlípidos:3.1\tgrupo alimenticio:Carnes y derivados\nPollo\tproteinas:20.6\tglúcidos:0.0\tlípidos:5.6\tgrupo alimenticio:Carnes y derivados\nBacalao\tproteinas:17.7\tglúcidos:0.0\tlípidos:0.4\tgrupo alimenticio:Pescados y mariscos\n")
     end
   end
   
