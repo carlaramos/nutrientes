@@ -44,7 +44,7 @@ RSpec.describe List do
     it "can insert many elements" do
       @list.insert([
         prueba1=Grupo_alimento.new("Huevo frito",14.1,0.0,19.5,"Huevos, lácteos y helados"),
-        Grupo_alimento.new("Leche vaca",3.3,4.8,3.2,"Huevos, lácteos y helados"),
+        prueba3=Grupo_alimento.new("Leche vaca",3.3,4.8,3.2,"Huevos, lácteos y helados"),
         Grupo_alimento.new("Yogurt",3.8,4.9,3.8,"Huevos, lácteos y helados"),
         Grupo_alimento.new("Cerdo",21.5,0.0,6.3,"Carnes y derivados"),
         Grupo_alimento.new("Ternera",21.1,0.0,3.1,"Carnes y derivados"),
@@ -72,5 +72,13 @@ RSpec.describe List do
     
   end
   
+  describe " # Extract methods " do
+  
+    it " Extract the first element " do
+      @list.shift_first
+      expect(@list.head.value).to eq(prueba3)
+    end
+  
+  end
 end
 
