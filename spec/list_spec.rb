@@ -34,6 +34,13 @@ RSpec.describe List do
       expect(@list.tail.value).to eq(@alimento)
     end
     
+    it "can insert elements" do
+      vector = [@alimento,@alimento2]
+      @list.insert(vector)
+      expect(@list.head.value).to eq(@alimento)
+      expect(@list.tail.value).to eq(@alimento2)
+    end
+    
   end
   
 end

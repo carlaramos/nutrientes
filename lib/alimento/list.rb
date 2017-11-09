@@ -12,15 +12,15 @@ class List
         @tail = tail
     end
     
-    def insert(element)
-        node = Node.new(element,nil,nil)
-        if(@head==nil)
-            @head = node
-            @tail = node
-        else
-            node.prev=@tail
-            @tail.next = node
-            @tail=node
-        end
+    def insert element
+            node = Node.new(element,nil,nil)
+            if(@head==nil)
+                @head = node
+                @tail = node
+            else
+                node.prev=@tail
+                @tail.next = node
+                @tail=node
+            end
     end
 end
