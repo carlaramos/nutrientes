@@ -1,5 +1,4 @@
 require "spec_helper"
-require "./lib/alimento/alimento_.rb"
 
 RSpec.describe Alimento do
   

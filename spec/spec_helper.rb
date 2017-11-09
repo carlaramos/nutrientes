@@ -1,5 +1,5 @@
 require "bundler/setup"
-require_relative "../lib/alimento/alimento_.rb"
+require_relative "../lib/alimento.rb"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
