@@ -7,9 +7,9 @@ Con dicha práctica haremos la implementación de una lista doblemente enlazada 
 
 Las herramientas que hemos usado para el desarrollo de la misma son las siguientes:
 
-**  Bundler: ** Manejo de gemas
-**  Rspec: **   Desarrollo dirigido por pruebas
-**  Guard: **   Comprobación continua
+__Bundler:__ Manejo de gemas
+__Rspec:__   Desarrollo dirigido por pruebas
+__Guard:__   Comprobación continua
 
 Usaremos la metodología del **desarrollo dirigido por pruebas**, que consiste en la definición de las pruebas, con el resultado que esperamos, y luego la implementación del mínimo código necesario para el éxito de la misma.
 
