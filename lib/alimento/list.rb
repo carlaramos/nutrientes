@@ -26,4 +26,9 @@ class List
         end
     end
     
+    def shift_first 
+        @head=@head.next
+        @head.prev=nil
+    end
+
 end
