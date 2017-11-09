@@ -25,8 +25,8 @@ RSpec.describe List do
   
     before :each do 
       @list=List.new(nil,nil)
-      @alimento = Alimento_.new("Huevo frito",3,2,1)
-      @alimento2 = Alimento_.new("Leche vaca",3,2,1)
+      @alimento = Alimento_.new("Huevo frito",14.1,0.0,19.5)
+      @alimento2 = Alimento_.new("Leche vaca",3.3,4.8,3.2)
     end 
    
     it "can insert an element" do
