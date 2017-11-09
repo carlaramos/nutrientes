@@ -71,7 +71,11 @@ RSpec.describe Alimento do
     end
     
     it "belongs to hierarchy" do 
-      expect(@huevo_frito.class.superclass). to eq(Alimento_)
+      expect(@huevo_frito.class.superclass).to eq(Alimento_)
+    end
+    
+    it "has a type" do
+      expect(@huevo_frito).to respond_to(:valor_energetico)
     end
     
   end
