@@ -82,6 +82,14 @@ RSpec.describe List do
       expect(@list.head.value).to eq(alimento2)
     end  
     
+    it " Extract the last element " do
+      @list = List.new(nil,nil)
+      alimento1=Grupo_alimento.new("Huevo frito",14.1,0.0,19.5,"Huevos, lácteos y helados")
+      alimento2=Grupo_alimento.new("Leche vaca",3.3,4.8,3.2,"Huevos, lácteos y helados")
+      @list.insert([alimento1,alimento2])
+      @list.shift_last
+      expect(@list.tail.value).to eq(alimento1)
+    end 
   end
   
 end
