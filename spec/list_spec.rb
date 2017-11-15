@@ -131,13 +131,41 @@ RSpec.describe List do
         Grupo_alimento.new("Plátanos",1.2,21.4,0.2,"Frutas"),
         Grupo_alimento.new("Pera",0.5,12.7,0.3,"Frutas")
         ])
+        @list2 = List.new(nil,nil)
+        @list2.insert([nil])
+        @list3=List.new(nil,nil)
+        @list3.insert([1,2,3])
     end
     
-    it "List has a max" do
+    it "Testing max" do # Devuelve el maximo
       expect(@list.max.to_s).to eq("Aceite de oliva\tproteinas:0.0\tglúcidos:0.2\tlípidos:99.6\tgrupo alimenticio:Alimentos grasos")
     end
   
-  end
+    it "Testing all?" do # Devuelve true si todos son distintos de false/nil
+      expect(@list.all?).to eq(true)
+      expect(@list2.all?).to eq(false)
+    end
+    
+    it "Testing any?" do # Devuele true si al menos uno es distinto de false/nil
+      expect(@list.any?).to eq(true)
+      expect(@list2.any?).to eq(false)
+    end
+    
+    it "Testing collect" do
+      expect(@list3.map{ |i| 2*i}).to eq([2,4,6])
+      expect(@list3.collect{ |i| i*i}).to eq([1,4,9])
+    end
+    
+    it "Testing count" do
+      expect(@list.count).to eq(22)
+      expect(@list3.count).to eq(3)
+    end
+    
+    it "Testing detect" do
+      
+    end
+    
+end
 
   
 end
