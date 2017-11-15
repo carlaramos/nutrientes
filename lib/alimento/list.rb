@@ -39,11 +39,7 @@ class List
     
     def to_s
         string=""
-        node=@head
-        while node != nil do
-            string = string + node.value.to_s + "\n"
-            node = node.next
-        end
+        each { |value| string+=value.to_s + "\n"  }   # Funciona también entre do-end
         return string
     end
     
