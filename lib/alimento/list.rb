@@ -5,6 +5,7 @@ Node = Struct.new(:value, :next, :prev)
 
 class List 
     
+    include Enumerable
     attr_reader :head, :tail
     
     def initialize(head,tail)
@@ -53,6 +54,5 @@ class List
             node = node.next
         end
     end
-    
 
 end

@@ -94,9 +94,16 @@ RSpec.describe Alimento do
     it "Alimento2 < alimento" do
       expect(@alimento2<@alimento).to eq(true)
     end
+   it "Alimento2 <= alimento" do
+      expect(@alimento2<=@alimento).to eq(true)
+    end
     
     it "Alimento > alimento2" do
       expect(@alimento>@alimento2).to eq(true)
+    end
+    
+    it "Alimento >= alimento2" do
+      expect(@alimento>=@alimento2).to eq(true)
     end
     
     it "Alimento = alimento2" do

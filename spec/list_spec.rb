@@ -134,7 +134,7 @@ RSpec.describe List do
     end
     
     it "List has a max" do
-      expect(@list.max.to_s).to eq("Aceite de oliva\tproteinas:0.0\tglúcidos:0.2\tlípidos:99.6\tgrupo alimenticio:Alimentos grasos\n")
+      expect(@list.max.to_s).to eq("Aceite de oliva\tproteinas:0.0\tglúcidos:0.2\tlípidos:99.6\tgrupo alimenticio:Alimentos grasos")
     end
   
   end
