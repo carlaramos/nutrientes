@@ -83,7 +83,7 @@ RSpec.describe Alimento do
     
   end
   
-  describe " # Alimento is comparable" do 
+  describe " # Alimento is comparable " do 
     
   before :all do
     @alimento = Alimento_.new("Huevo frito", 14.1, 0.0, 19.5)
