@@ -87,14 +87,30 @@ RSpec.describe Alimento do
     
   before :all do
     @alimento = Alimento_.new("Huevo frito", 14.1, 0.0, 19.5)
-    @alimento2 = Alimento_.new("Leche",1,1,1)
+    @alimento2 = Alimento_.new("Leche vaca",3.3,4.8,3.2)
     @huevo_frito = Grupo_alimento.new("Huevo frito", 14.1, 0.0, 19.5,"Huevos, lácteos y helados")
   end
   
-    it "Alimento1 < alimento2" do
+    it "Alimento2 < alimento" do
       expect(@alimento2<@alimento).to eq(true)
     end
-  
+    
+    it "Alimento > alimento2" do
+      expect(@alimento>@alimento2).to eq(true)
+    end
+    
+    it "Alimento = alimento2" do
+      expect(@alimento==@alimento2).to eq(false)
+    end
+    
+    it "Compare whit another class instance" do
+      expect(@alimento==1).to eq(false)
+    end
+    
+    it "Compare alimento whit grupo_alimento" do
+      expect(@huevo_frito==@alimento).to eq(true)
+    end 
+    
   end
   
   it "has a version number" do
@@ -102,7 +118,6 @@ RSpec.describe Alimento do
   end
 
   it "does something useful" do
-    expect(true).to eq(true)
-  end
+    expect(true).to eq(true)  end
   
 end

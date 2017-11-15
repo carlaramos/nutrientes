@@ -24,6 +24,7 @@ class Alimento_
     end
     
     def <=> (another)
+        return nil unless another.is_a? Alimento_
         self.valor_energetico <=> another.valor_energetico
     end
     

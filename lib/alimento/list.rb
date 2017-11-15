@@ -38,12 +38,21 @@ class List
     
     def to_s
         string=""
-        node=head
+        node=@head
         while node != nil do
             string = string + node.value.to_s + "\n"
             node = node.next
         end
         return string
     end
+    
+    def each 
+        node=@head
+        while node != nil do
+            yield node.value
+            node = node.next
+        end
+    end
+    
 
 end
