@@ -1,7 +1,9 @@
 require "alimento/version"
 
+
 class Alimento_
     
+    include Comparable
     attr_reader :name, :proteins, :glucids, :fats
     
     def initialize(name, proteins, glucids, fats)
@@ -21,7 +23,12 @@ class Alimento_
         v_e = (@proteins*4)+(@glucids*4)+(@fats*9)
     end
     
+    def <=> (another)
+        self.valor_energetico <=> another.valor_energetico
+    end
+    
 end 
+
 
 class Grupo_alimento < Alimento_
     
