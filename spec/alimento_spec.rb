@@ -83,6 +83,20 @@ RSpec.describe Alimento do
     
   end
   
+  describe " # Alimento is comparable" do 
+    
+  before :all do
+    @alimento = Alimento_.new("Huevo frito", 14.1, 0.0, 19.5)
+    @alimento2 = Alimento_.new("Leche",1,1,1)
+    @huevo_frito = Grupo_alimento.new("Huevo frito", 14.1, 0.0, 19.5,"Huevos, lácteos y helados")
+  end
+  
+    it "Alimento1 < alimento2" do
+      expect(@alimento2<@alimento).to eq(true)
+    end
+  
+  end
+  
   it "has a version number" do
     expect(Alimento::VERSION).not_to be nil
   end
