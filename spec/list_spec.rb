@@ -151,18 +151,32 @@ RSpec.describe List do
       expect(@list2.any?).to eq(false)
     end
     
-    it "Testing collect" do
+    it "Testing collect" do # Devuelve el resultado de aplicar a la lista las operaciones contenidas enel bloque
       expect(@list3.map{ |i| 2*i}).to eq([2,4,6])
       expect(@list3.collect{ |i| i*i}).to eq([1,4,9])
     end
     
-    it "Testing count" do
+    it "Testing count" do  # Devuelve el numero de elementos en la lista
       expect(@list.count).to eq(22)
       expect(@list3.count).to eq(3)
     end
     
-    it "Testing detect" do
-      
+    it "Testing detect" do  # Devuelve el valor del primer elemento que es true en la comprobacion del bloque
+      expect(@list3.detect { |i| i==1 }).to eq(1)
+      expect(@list3.find { |i| i==2}).to eq(2)
+    end
+    
+    it "Testing drop" do # Elimina los n primeros elementos del vector y devuelve el resto
+      expect(@list3.drop(1)).to eq([2,3])
+    end
+    
+    it "Testing min" do # Devuelve el minimo elemento en la lista
+      expect(@list.min.to_s).to eq("Tomate\tproteinas:1.0\tglúcidos:3.5\tlípidos:0.2\tgrupo alimenticio:Verduras y Hortalizas")
+      expect(@list3.min).to eq(1)
+    end
+
+    it "Testing sort" do  # Devuelve la lista en orden inverso usando el <=> implementado en la clase del objeto
+      expect(@list3.sort { |a,b| b <=> a}).to eq([3,2,1])
     end
     
 end
