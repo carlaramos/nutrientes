@@ -148,17 +148,27 @@ RSpec.describe Alimento do
     
     it " AIBC " do
       expect(@compota_manzana.aibc(0)).to eq(27.999999999999993)
-      expect(@azucar.aibc(0)).to eq(255.99999999999997)
       expect(@compota_manzana.aibc(1)).to eq(183.25)
+      expect(@azucar.aibc(0)).to eq(255.99999999999997)
+      expect(@azucar.aibc(1)).to eq(196.00000000000003)
+      expect(@yogurt.aibc(0)).to eq(30.500000000000036)
+      expect(@yogurt.aibc(1)).to eq(138.49999999999997)
+      expect(@chocolate.aibc(0)).to eq(18.500000000000007)
+      expect(@chocolate.aibc(1)).to eq(44.75000000000004)
     end
     
     it " Individual IG " do
       expect((@compota_manzana.aibc(0)/@azucar.aibc(0))*100).to eq(10.937499999999998)
+      expect((@compota_manzana.aibc(1)/@azucar.aibc(1))*100).to eq(93.49489795918366)
+      expect((@yogurt.aibc(0)/@azucar.aibc(0))*100).to eq(11.914062500000016)
+      expect((@yogurt.aibc(1)/@azucar.aibc(1))*100).to eq(70.66326530612243)
+      expect((@chocolate.aibc(0)/@azucar.aibc(0))*100).to eq(7.226562500000004)
+      expect((@chocolate.aibc(1)/@azucar.aibc(1))*100).to eq(22.83163265306124)
     end
     
-    it " Food IG " do
-      expect(())
-    
+   # it " Food IG " do
+   #   expect(())
+  #  end
     
   end
 
