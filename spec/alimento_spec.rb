@@ -125,6 +125,26 @@ RSpec.describe Alimento do
   end
 
   it "does something useful" do
-    expect(true).to eq(true)  end
+    expect(true).to eq(true)  
+  end
   
+  describe " # Functional Programming" do
+    
+    before :all do
+      @compota_manzana = Grupo_alimento.new("Compota de manzana", 4.1, 0.0, 9.5, "Frutas y derivados" )
+      @azucar = Grupo_alimento.new("Azucar", 0.0, 99.8, 0.0, "Alimentos ricos en carbohidratos")
+      @compota_manzana.datos = [[6.7,6.5,6.8,6.9,7.0,7.1,6.9,6.9,6.9,6.7,6.9,7.3,7.0,7.0,7.2,7.1,6.8,7.2,7.3,7.0,6.8,6.7,6.8,6.7,6.9],
+                            [4.6,4.8,5.3,5.6,6.1,6.5,6.6,7.0,7.0,6.8,6.4,6.3,6.1,6.1,6.2,6.0,6.1,6.1,6.2,6.3,6.4,6.1,6.1,5.7,5.9]]
+      @azucar.datos = [[4.9,5.3,5.9,6.7,7.2,7.6,8.0,8.2,8.2,8.4,8.3,8.3,8.0,7.5,7.1,6.8,6.8,6.9,6.8,6.3,6.2,6.3,6.2,6.3,6.1],
+                       [6.3,5.4,5.6,5.7,6.5,7.4,7.9,7.4,7.7,7.9,7.9,7.8,7.8,7.8,8.0,8.5,9.4,10.8,10.5,9.1,8.9,8.3,7.7,7.6,7.5]]
+    end
+    
+    it " AIBC" do
+      expect(@compota_manzana.aibc(@compota_manzana.datos[0])).to eq(27.999999999999993)
+    end
+    
+    
+  end
+
 end
+
