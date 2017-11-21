@@ -16,6 +16,7 @@ class Alimento_
 
     include Comparable
     attr_reader :name, :proteins, :glucids, :fats
+    attr_accessor :datos
     # Se asignan el nombre, las proteinas, los glucidos y las grasas
     def initialize(name, proteins, glucids, fats)
         @name = name
@@ -39,6 +40,20 @@ class Alimento_
         return nil unless another.is_a? Alimento_
         self.valor_energetico <=> another.valor_energetico
     end
+    
+    def aibc(indice)
+        vector = []
+        datos[indice][1..datos[indice].length-1].zip(datos[indice][0..datos[indice].length-2]) do | gi, gi_1 | 
+            if gi < datos[indice][0]
+                vector << 0.0
+            else 
+                vector << (((gi-datos[indice][0])+(gi_1-datos[indice][0]))/2)*5
+            end
+        end 
+        
+        vector.reduce(:+)
+    end
+
     
 end 
 
