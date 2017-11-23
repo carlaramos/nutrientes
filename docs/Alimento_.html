@@ -86,6 +86,8 @@
     
     <li ><a href="#method-i-3C-3D-3E">#&lt;=&gt;</a>
     
+    <li ><a href="#method-i-aibc">#aibc</a>
+    
     <li ><a href="#method-i-to_s">#to_s</a>
     
     <li ><a href="#method-i-valor_energetico">#valor_energetico</a>
@@ -125,6 +127,19 @@ Comparable</p>
         <h3>Attributes</h3>
       </header>
 
+      
+      <div id="attribute-i-datos" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">datos</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
       
       <div id="attribute-i-fats" class="method-detail">
         <div class="method-heading attribute-method-heading">
@@ -207,7 +222,7 @@ Comparable</p>
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/alimento/alimento_.rb, line 19</span>
+            <pre><span class="ruby-comment"># File lib/alimento/alimento_.rb, line 20</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">proteins</span>, <span class="ruby-identifier">glucids</span>, <span class="ruby-identifier">fats</span>)
     <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
     <span class="ruby-ivar">@proteins</span> = <span class="ruby-identifier">proteins</span>
@@ -252,10 +267,52 @@ comparación el valor energético</p>
 
           
           <div class="method-source-code" id="3C-3D-3E-source">
-            <pre><span class="ruby-comment"># File lib/alimento/alimento_.rb, line 37</span>
+            <pre><span class="ruby-comment"># File lib/alimento/alimento_.rb, line 38</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;=&gt;</span> (<span class="ruby-identifier">another</span>)
     <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">another</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Alimento_</span>
     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">valor_energetico</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">another</span>.<span class="ruby-identifier">valor_energetico</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-aibc" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">aibc</span><span
+            class="method-args">(indice)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Devuelve el valor del AIBC de un alimento para un individuo concreto</p>
+          
+          
+
+          
+          <div class="method-source-code" id="aibc-source">
+            <pre><span class="ruby-comment"># File lib/alimento/alimento_.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">aibc</span>(<span class="ruby-identifier">indice</span>)
+    <span class="ruby-identifier">vector</span> = []
+    <span class="ruby-identifier">datos</span>[<span class="ruby-identifier">indice</span>][<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-identifier">datos</span>[<span class="ruby-identifier">indice</span>].<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>].<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">datos</span>[<span class="ruby-identifier">indice</span>][<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">datos</span>[<span class="ruby-identifier">indice</span>].<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">2</span>]) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">gi</span>, <span class="ruby-identifier">gi_1</span> <span class="ruby-operator">|</span> 
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">gi</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">datos</span>[<span class="ruby-identifier">indice</span>][<span class="ruby-value">0</span>]
+            <span class="ruby-identifier">vector</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">0.0</span>
+        <span class="ruby-keyword">else</span> 
+            <span class="ruby-identifier">vector</span> <span class="ruby-operator">&lt;&lt;</span> (((<span class="ruby-identifier">gi</span><span class="ruby-operator">-</span><span class="ruby-identifier">datos</span>[<span class="ruby-identifier">indice</span>][<span class="ruby-value">0</span>])<span class="ruby-operator">+</span>(<span class="ruby-identifier">gi_1</span><span class="ruby-operator">-</span><span class="ruby-identifier">datos</span>[<span class="ruby-identifier">indice</span>][<span class="ruby-value">0</span>]))<span class="ruby-operator">/</span><span class="ruby-value">2</span>)<span class="ruby-operator">*</span><span class="ruby-value">5</span>
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span> 
+    
+    <span class="ruby-identifier">vector</span>.<span class="ruby-identifier">reduce</span>(<span class="ruby-value">:+</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -286,7 +343,7 @@ comparación el valor energético</p>
 
           
           <div class="method-source-code" id="to_s-source">
-            <pre><span class="ruby-comment"># File lib/alimento/alimento_.rb, line 26</span>
+            <pre><span class="ruby-comment"># File lib/alimento/alimento_.rb, line 27</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
     <span class="ruby-identifier">string</span> = (<span class="ruby-node">&quot;#{@name}\tproteinas:#{@proteins}\tglúcidos:#{@glucids}\tlípidos:#{@fats}&quot;</span>)
    <span class="ruby-comment"># puts string</span>
@@ -321,7 +378,7 @@ comparación el valor energético</p>
 
           
           <div class="method-source-code" id="valor_energetico-source">
-            <pre><span class="ruby-comment"># File lib/alimento/alimento_.rb, line 32</span>
+            <pre><span class="ruby-comment"># File lib/alimento/alimento_.rb, line 33</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">valor_energetico</span> 
     <span class="ruby-identifier">v_e</span> = (<span class="ruby-ivar">@proteins</span><span class="ruby-operator">*</span><span class="ruby-value">4</span>)<span class="ruby-operator">+</span>(<span class="ruby-ivar">@glucids</span><span class="ruby-operator">*</span><span class="ruby-value">4</span>)<span class="ruby-operator">+</span>(<span class="ruby-ivar">@fats</span><span class="ruby-operator">*</span><span class="ruby-value">9</span>)
 <span class="ruby-keyword">end</span></pre>

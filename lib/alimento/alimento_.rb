@@ -40,7 +40,7 @@ class Alimento_
         return nil unless another.is_a? Alimento_
         self.valor_energetico <=> another.valor_energetico
     end
-    
+    # Devuelve el valor del AIBC de un alimento para un individuo concreto
     def aibc(indice)
         vector = []
         datos[indice][1..datos[indice].length-1].zip(datos[indice][0..datos[indice].length-2]) do | gi, gi_1 | 

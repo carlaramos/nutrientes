@@ -166,9 +166,14 @@ RSpec.describe Alimento do
       expect((@chocolate.aibc(1)/@azucar.aibc(1))*100).to eq(22.83163265306124)
     end
     
-   # it " Food IG " do
-   #   expect(())
-  #  end
+    it " Food IG " do
+      ig_manzana = (0..@compota_manzana.datos.length-1).map { | indice | (@compota_manzana.aibc(indice)/@azucar.aibc(indice))*100 }
+      expect(ig_manzana.reduce(:+)/@compota_manzana.datos.length).to eq(52.21619897959183)
+      ig_yogurt = (0..@yogurt.datos.length-1).map { | indice | (@yogurt.aibc(indice)/@azucar.aibc(indice))*100 }
+      expect(ig_yogurt.reduce(:+)/@yogurt.datos.length).to eq(41.28866390306122)
+      ig_chocolate = (0..@chocolate.datos.length-1).map { | indice | (@chocolate.aibc(indice)/@azucar.aibc(indice))*100 }
+      expect(ig_chocolate.reduce(:+)/@chocolate.datos.length).to eq(15.029097576530623)
+    end
     
   end
 

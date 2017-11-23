@@ -56,10 +56,11 @@
   <h3>Table of Contents</h3>
 
   <ul class="link-list" role="directory">
-    <li><a href="#label-Pr-C3-A1ctica+7.+Listas+doblemente+enlazadas+con+Ruby">Práctica 7. Listas doblemente enlazadas con Ruby</a>
+    <li><a href="#label-Pr-C3-A1ctica+9.+Programaci-C3-B3n+Funcional">Práctica 9. Programación Funcional</a>
     <li><a href="#label-Carla+Ramos+Alonso">Carla Ramos Alonso</a>
     <li><a href="#label-Interpretaci-C3-B3n">Interpretación</a>
     <li><a href="#label-Resultado">Resultado</a>
+    <li><a href="#label-Documentaci-C3-B3n">Documentación</a>
   </ul>
 </div>
 
@@ -92,13 +93,20 @@
 
 <main role="main" aria-label="Page README.md">
 
-<h1 id="label-Pr-C3-A1ctica+7.+Listas+doblemente+enlazadas+con+Ruby">Práctica 7. Listas doblemente enlazadas con Ruby<span><a href="#label-Pr-C3-A1ctica+7.+Listas+doblemente+enlazadas+con+Ruby">&para;</a> <a href="#top">&uarr;</a></span></h1>
+<h1 id="label-Pr-C3-A1ctica+9.+Programaci-C3-B3n+Funcional">Práctica 9. Programación Funcional<span><a href="#label-Pr-C3-A1ctica+9.+Programaci-C3-B3n+Funcional">&para;</a> <a href="#top">&uarr;</a></span></h1>
 
 <h2 id="label-Carla+Ramos+Alonso">Carla Ramos Alonso<span><a href="#label-Carla+Ramos+Alonso">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
-<p>Práctica 7 de la asignatura de Lenguajes y paradigmas de la programación.
-Con dicha práctica haremos la implementación de una lista doblemente
-enlazada y la posterior inserción y eliminación de alimentos de la misma.</p>
+<p>Práctica 9 de la asignatura de Lenguajes y paradigmas de la programación.
+En dicha práctica haremos uso de las prácticas anteriores, y utilizaremos
+la clase <a href="Alimento_.html">Alimento_</a> y <a
+href="List.html">List</a> que en nuestro caso definen una lista doblemente
+enlazada de alimentos, que a su vez pertenecen a un grupo, ya que hemos
+hecho uso de la herencia. Hemos hecho uso de los mixin de Ruby
+<strong>Enumerable</strong> y <strong>Comparable</strong>. Además, en esta
+práctica hemos hecho uso del paradigma de programación funcional y hemos
+calculado el <strong>aibc</strong> y el <strong>ig</strong> de los
+alimentos y de los distintos individuos.</p>
 
 <p>Las herramientas que hemos usado para el desarrollo de la misma son las
 siguientes:</p>
@@ -117,7 +125,7 @@ necesario para el éxito de la misma.</p>
 <p>Para la interpretación del programa tendremos tan solo que modificar los
 ficheros de pruebas o clicar enter en la consola con la ejecución de guard,
 ya que este nos permite ver la ejecución de las pruebas cada vez que estas
-se modifiquen.</p>
+se modifiquen. Para ello ejecutaremos:<br>  <code>bundle exec guard</code></p>
 
 <h2 id="label-Resultado">Resultado<span><a href="#label-Resultado">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
@@ -125,7 +133,23 @@ se modifiquen.</p>
 último.<br> El programa también hace uso de <strong>herencia</strong> con
 Ruby, de manera que los alimentos están clasificados por grupos de
 alimentos, que es una clase heredada de la clase alimento creada en las
-prácticas anteriores.</p>
+prácticas anteriores. A su vez, gracias a los <strong>mixin</strong>
+implementados, podremos obtener el maximo valor en la lista, el menor,
+desordenarla, definir un bloque para que se cumpla en los elementos de la
+lista, etc. Tenemos también el resultado del AIBC y además los IG de los
+alimentos (yogurt, chocolate y compota de manzana) y de los dos individuos
+instanciados.</p>
+
+<h2 id="label-Documentaci-C3-B3n">Documentación<span><a href="#label-Documentaci-C3-B3n">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Para generar la documentación en Ruby he hecho uso de la herramienta
+<strong>rdoc</strong> la cual he instalado mediante: <code>gem install
+rdoc</code> Y tras haber comentado el código fuente he generado la
+documentación con: <code>rdoc</code> Se ha generado un directorio
+<strong>docs</strong> en mi directorio de trabajo en el que se incluye el
+fichero donde se puede encontrar toda la documentación:</p>
+
+<p><strong>docs/index.html</strong></p>
 </main>
 
 
