@@ -30,7 +30,7 @@ El programa también hace uso de **herencia** con Ruby, de manera que los alimen
 A su vez, gracias a los **mixin** implementados, podremos obtener el maximo valor en la lista, el menor, desordenarla, definir un bloque para que se cumpla en los elementos de la lista, etc. 
 Tenemos también el resultado del AIBC y además los IG de los alimentos (yogurt, chocolate y compota de manzana) y de los dos individuos instanciados.
 
-## Documentación
+## Documentación:
 
 Para generar la documentación en Ruby he hecho uso de la herramienta **rdoc** la cual he instalado mediante: 
 `gem install rdoc`
