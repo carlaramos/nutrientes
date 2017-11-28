@@ -1,4 +1,6 @@
 require "spec_helper"
+require 'benchmark'
+include Benchmark
 
 RSpec.describe List do
   
@@ -224,6 +226,17 @@ end
         expect(@list.sort[0].to_s).to eq("Tomate\tproteinas:1.0\tglúcidos:3.5\tlípidos:0.2\tgrupo alimenticio:Verduras y Hortalizas")
         expect(@list.sort[@list.count-1].to_s).to eq("Aceite de oliva\tproteinas:0.0\tglúcidos:0.2\tlípidos:99.6\tgrupo alimenticio:Alimentos grasos")
       end
+      
+      it "Testing benchmark" do
+            Benchmark.benchmark(CAPTION, 7, FORMAT, ">> Total",">> avg") do |x|
+                a = x.report(">> for") { for i in 0..30 do @list.ordenar_seleccion end }
+                b = x.report(">> each") { for i in 0..30 do @list.ordenar_each end }
+                c = x.report(">> sort") { for i in 0..30 do   vector = @list.map { |x| x }
+                                                            vector.sort end }
+                [a+b+c, (a+b+c)/3]                                                
+            end
+      end
+      
   end
 
   
