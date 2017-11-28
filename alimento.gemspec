@@ -36,4 +36,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "guard-rspec"
   spec.add_development_dependency "guard-bundler"
   spec.add_development_dependency "guard-rdoc"
+  spec.add_development_dependency "coveralls"
 end
