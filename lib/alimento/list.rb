@@ -62,5 +62,4 @@ class List
             node = node.next
         end
     end
-
 end
