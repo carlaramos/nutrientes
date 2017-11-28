@@ -72,12 +72,36 @@ class List
             for j in i + 1..self.count-1
                 if aux > vector[j] 
                     aux = vector[j]
-                    c = j
+                    c = j 
                 end
             end
             
             vector[c] = vector[i]
             vector[i] = aux
+        end
+        vector
+    end
+    
+    def ordenar_each
+        vector = self.map { |x| x }
+        indice=0
+        vector.each do |x|
+            aux = x
+            c=indice
+            indice2=indice+1
+            
+            vector[indice2..vector.length-1].each do |y|
+                if aux > y 
+                    aux = y
+                    c = indice2
+                end
+                indice2+=1
+            end
+            
+            vector[c] = x
+            vector[indice] = aux
+            
+            indice+=1
         end
         vector
     end
