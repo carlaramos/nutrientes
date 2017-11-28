@@ -231,8 +231,8 @@ end
             Benchmark.benchmark(CAPTION, 7, FORMAT, ">> Total",">> avg") do |x|
                 a = x.report(">> for") { for i in 0..30 do @list.ordenar_seleccion end }
                 b = x.report(">> each") { for i in 0..30 do @list.ordenar_each end }
-                c = x.report(">> sort") { for i in 0..30 do   vector = @list.map { |x| x }
-                                                            vector.sort end }
+                c = x.report(">> sort") { for i in 0..30 do @list.sort end }  
+                                              
                 [a+b+c, (a+b+c)/3]                                                
             end
       end
