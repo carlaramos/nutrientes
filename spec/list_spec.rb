@@ -212,6 +212,12 @@ end
       
       it " Sorted list with for" do
         expect(@list.ordenar_seleccion[0].to_s).to eq("Tomate\tproteinas:1.0\tglúcidos:3.5\tlípidos:0.2\tgrupo alimenticio:Verduras y Hortalizas")
+        expect(@list.ordenar_seleccion[@list.count-1].to_s).to eq("Aceite de oliva\tproteinas:0.0\tglúcidos:0.2\tlípidos:99.6\tgrupo alimenticio:Alimentos grasos")
+      end
+      
+      it " Sorted list with each" do
+        expect(@list.ordenar_each[0].to_s).to eq("Tomate\tproteinas:1.0\tglúcidos:3.5\tlípidos:0.2\tgrupo alimenticio:Verduras y Hortalizas")
+        expect(@list.ordenar_each[@list.count-1].to_s).to eq("Aceite de oliva\tproteinas:0.0\tglúcidos:0.2\tlípidos:99.6\tgrupo alimenticio:Alimentos grasos")
       end
   end
 

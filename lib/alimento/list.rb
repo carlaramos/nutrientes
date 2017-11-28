@@ -62,6 +62,7 @@ class List
             node = node.next
         end
     end
+    # Se ordena una lista utlizando bucles for
     def ordenar_seleccion 
         vector = self.map { |x| x }
         for i in 0..self.count-1
