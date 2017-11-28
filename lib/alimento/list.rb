@@ -62,4 +62,22 @@ class List
             node = node.next
         end
     end
+    def ordenar_seleccion 
+        vector = self.map { |x| x }
+        for i in 0..self.count-1
+            aux = vector[i]
+            c = i
+
+            for j in i + 1..self.count-1
+                if aux > vector[j] 
+                    aux = vector[j]
+                    c = j
+                end
+            end
+            
+            vector[c] = vector[i]
+            vector[i] = aux
+        end
+        vector
+    end
 end
