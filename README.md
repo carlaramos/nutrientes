@@ -15,9 +15,9 @@ Las herramientas que hemos usado para el desarrollo de la misma son las siguient
 __Bundler:__ Manejo de gemas  
 __Rspec:__   Desarrollo dirigido por pruebas  
 __Guard:__   Comprobación continua  
-__Travis:__  Ejecución de los resultados
-__Benchmark:__ Informe de tiempo (banco de pruebas)
-__Coveralls:__ Devuelve el cubrimiento y las estadísticas del código Ruby desarrollado
+__Travis:__  Ejecución de los resultados  
+__Benchmark:__ Informe de tiempo (banco de pruebas)  
+__Coveralls:__ Devuelve el cubrimiento y las estadísticas del código Ruby desarrollado  
 
 Usaremos la metodología del **desarrollo dirigido por pruebas**, que consiste en la definición de las pruebas, con el resultado que esperamos, y luego la implementación del mínimo código necesario para el éxito de la misma.
 
