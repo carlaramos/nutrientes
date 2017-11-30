@@ -36,7 +36,7 @@ Tenemos también el resultado del AIBC y además los IG de los alimentos (yogurt
 Tras la ordenación de la lista obtendremos una lista ordenada utilizando los valores energéticos de cada alimento.
 
 
-## Documentación:
+## Documentación
 
 Para generar la documentación en Ruby he hecho uso de la herramienta **rdoc** la cual he instalado mediante: 
 `gem install rdoc`
