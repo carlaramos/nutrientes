@@ -1,6 +1,6 @@
 require "spec_helper"
 include Benchmark
-require 'benchmark'
+
 
 RSpec.describe List do
   
