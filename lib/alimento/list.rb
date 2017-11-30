@@ -81,7 +81,7 @@ class List
         end
         vector
     end
-    
+    # Se ordena una lista utilizando el método each
     def ordenar_each
         vector = self.map { |x| x }
         indice=0
