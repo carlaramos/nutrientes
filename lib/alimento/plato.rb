@@ -4,7 +4,8 @@ require "alimento/version"
 #require_relative "alimento_.rb"
 
 class Plato
-    attr_accessor :alimento, :cantidad
+    
+    attr_reader   :name, :vegetables, :cereals, :proteins, :fruits, :oils, :valor_energetico
     
         def initialize name, &block 
                 @name = name 

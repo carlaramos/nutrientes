@@ -14,11 +14,52 @@ RSpec.describe Plato do
         end
     end
     
-    describe " # DSL " do
+    describe " # Plato atributes methods " do
         
-        it "prueba" do
-            puts @lentejas_arroz
+        it "has a name method" do
+          expect(@lentejas_arroz.name).to eq("Lentejas con arroz, salsa de tomate, huevo y plátano a la plancha")
+        end 
+        it "has vegetables method" do
+            expect(@lentejas_arroz.vegetables[0][0].to_s).to eq("Tomate\t1.0\t3.5\t0.2")
+            expect(@lentejas_arroz.vegetables[0][1].to_s).to eq("990.0")
         end
-        
+        it "has cereals method" do
+            expect(@lentejas_arroz.cereals[0][0].to_s).to eq("Arroz\t6.8\t77.7\t0.6")
+            expect(@lentejas_arroz.cereals[0][1].to_s).to eq("63529.0")
+        end
+        it "has fruits method" do
+            expect(@lentejas_arroz.fruits[0][0].to_s).to eq("Plátano\t1.2\t21.4\t0.2")
+            expect(@lentejas_arroz.fruits[0][1].to_s).to eq("1844.0")
+        end
+        it "has proteins method" do
+            expect(@lentejas_arroz.proteins[0][0].to_s).to eq("Lentejas\t23.5\t52.0\t1.4")
+            expect(@lentejas_arroz.proteins[0][1].to_s).to eq("25168.0")
+        end
+        it "has oils method" do
+            expect(@lentejas_arroz.oils[0][0].to_s).to eq("Aceite de oliva\t0.0\t0.2\t99.6")
+            expect(@lentejas_arroz.oils[0][1].to_s).to eq("6729.0")
+        end
     end
+    
+    describe " # Plato has to_s" do
+        
+        it "vegetables has to_s" do
+            expect(@lentejas_arroz.vegetables[0][0].to_s).to eq("Tomate\t1.0\t3.5\t0.2")
+        end
+        it "cereales has to_s" do
+            expect(@lentejas_arroz.cereals[0][0].to_s).to eq("Arroz\t6.8\t77.7\t0.6")
+        end
+        it "fruits has to_s" do
+            expect(@lentejas_arroz.fruits[0][0].to_s).to eq("Plátano\t1.2\t21.4\t0.2")
+        end
+        it "proteins has to_s" do
+            expect(@lentejas_arroz.proteins[0][0].to_s).to eq("Lentejas\t23.5\t52.0\t1.4")
+            expect(@lentejas_arroz.proteins[1][0].to_s).to eq("Huevo frito\t14.1\t0.0\t19.5")
+
+        end
+        it "oils has to_s" do
+           expect(@lentejas_arroz.oils[0][0].to_s).to eq("Aceite de oliva\t0.0\t0.2\t99.6")
+        end
+    end
+    
 end

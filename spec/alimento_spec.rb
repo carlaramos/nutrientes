@@ -34,9 +34,7 @@ RSpec.describe Alimento do
       expect(@alimento.name).to eq("Huevo frito")
     end 
     
-    it "has proteins method" do
-      expect(@alimento.proteins).to eq(14.1)
-    end
+
     
     it "has glucids method" do
       expect(@alimento.glucids).to eq(0.0)
