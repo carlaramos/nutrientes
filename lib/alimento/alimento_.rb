@@ -26,7 +26,7 @@ class Alimento_
     end
     # Formatea la salida a texto
     def to_s
-        string = ("#{@name}\tproteinas:#{@proteins}\tglúcidos:#{@glucids}\tlípidos:#{@fats}")
+        string = ("#{@name}\t#{@proteins}\t#{@glucids}\t#{@fats}")
        # puts string
        # return string
     end
@@ -68,6 +68,6 @@ class Grupo_alimento < Alimento_
     end
     # Formatea la salida a texto
     def to_s
-        string = super.to_s + "\tgrupo alimenticio:#{@group}"  
+        string = super.to_s# + "\t#{@group}"  
     end
 end
