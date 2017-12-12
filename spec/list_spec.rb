@@ -76,15 +76,15 @@ RSpec.describe List do
   end 
   
   describe " # To string" do
-=begin
+    
     it " list has to_s" do
       @list = List.new(nil,nil)
       @list.insert([Grupo_alimento.new("Ternera",21.1,0.0,3.1,"Carnes y derivados"),
         Grupo_alimento.new("Pollo",20.6,0.0,5.6,"Carnes y derivados"),
         Grupo_alimento.new("Bacalao",17.7,0.0,0.4,"Pescados y mariscos")])
-      expect(@list.to_s).to eq("Ternera\tproteinas:21.1\tglúcidos:0.0\tlípidos:3.1\tgrupo alimenticio:Carnes y derivados\nPollo\tproteinas:20.6\tglúcidos:0.0\tlípidos:5.6\tgrupo alimenticio:Carnes y derivados\nBacalao\tproteinas:17.7\tglúcidos:0.0\tlípidos:0.4\tgrupo alimenticio:Pescados y mariscos\n")
+      expect(@list.to_s).to eq("Ternera\t21.1\t0.0\t3.1\tCarnes y derivados\nPollo\t20.6\t0.0\t5.6\tCarnes y derivados\nBacalao\t17.7\t0.0\t0.4\tPescados y mariscos\n")
     end
-=end
+
   end
   
   describe " # Extract methods " do
@@ -142,7 +142,7 @@ RSpec.describe List do
     end
     
     it "Testing max" do # Devuelve el maximo
-      #expect(@list.max.to_s).to eq("Aceite de oliva\tproteinas:0.0\tglúcidos:0.2\tlípidos:99.6\tgrupo alimenticio:Alimentos grasos")
+      expect(@list.max.to_s).to eq("Aceite de oliva\t0.0\t0.2\t99.6\tAlimentos grasos")
     end
   
     it "Testing all?" do # Devuelve true si todos son distintos de false/nil
@@ -175,8 +175,8 @@ RSpec.describe List do
     end
     
     it "Testing min" do # Devuelve el minimo elemento en la lista
- #     expect(@list.min.to_s).to eq("Tomate\tproteinas:1.0\tglúcidos:3.5\tlípidos:0.2\tgrupo alimenticio:Verduras y Hortalizas")
-  #    expect(@list3.min).to eq(1)
+      expect(@list.min.to_s).to eq("Tomate\t1.0\t3.5\t0.2\tVerduras y Hortalizas")
+      expect(@list3.min).to eq(1)
     end
 
     it "Testing sort" do  # Devuelve la lista en orden inverso usando el <=> implementado en la clase del objeto
@@ -213,22 +213,22 @@ end
         Grupo_alimento.new("Pera",0.5,12.7,0.3,"Frutas")
         ])
     end
-=begin      
+     
       it " Sorted list with for" do
-        expect(@list.ordenar_seleccion[0].to_s).to eq("Tomate\tproteinas:1.0\tglúcidos:3.5\tlípidos:0.2\tgrupo alimenticio:Verduras y Hortalizas")
-        expect(@list.ordenar_seleccion[@list.count-1].to_s).to eq("Aceite de oliva\tproteinas:0.0\tglúcidos:0.2\tlípidos:99.6\tgrupo alimenticio:Alimentos grasos")
+        expect(@list.ordenar_seleccion[0].to_s).to eq("Tomate\t1.0\t3.5\t0.2\tVerduras y Hortalizas")
+        expect(@list.ordenar_seleccion[@list.count-1].to_s).to eq("Aceite de oliva\t0.0\t0.2\t99.6\tAlimentos grasos")
       end
       
       it " Sorted list with each" do
-        expect(@list.ordenar_each[0].to_s).to eq("Tomate\tproteinas:1.0\tglúcidos:3.5\tlípidos:0.2\tgrupo alimenticio:Verduras y Hortalizas")
-        expect(@list.ordenar_each[@list.count-1].to_s).to eq("Aceite de oliva\tproteinas:0.0\tglúcidos:0.2\tlípidos:99.6\tgrupo alimenticio:Alimentos grasos")
+        expect(@list.ordenar_each[0].to_s).to eq("Tomate\t1.0\t3.5\t0.2\tVerduras y Hortalizas")
+        expect(@list.ordenar_each[@list.count-1].to_s).to eq("Aceite de oliva\t0.0\t0.2\t99.6\tAlimentos grasos")
       end
       
       it " Sorted list with sort" do
-        expect(@list.sort[0].to_s).to eq("Tomate\tproteinas:1.0\tglúcidos:3.5\tlípidos:0.2\tgrupo alimenticio:Verduras y Hortalizas")
-        expect(@list.sort[@list.count-1].to_s).to eq("Aceite de oliva\tproteinas:0.0\tglúcidos:0.2\tlípidos:99.6\tgrupo alimenticio:Alimentos grasos")
+        expect(@list.sort[0].to_s).to eq("Tomate\t1.0\t3.5\t0.2\tVerduras y Hortalizas")
+        expect(@list.sort[@list.count-1].to_s).to eq("Aceite de oliva\t0.0\t0.2\t99.6\tAlimentos grasos")
       end
-=end     
+    
       it "Testing benchmark" do
             Benchmark.benchmark(CAPTION, 7, FORMAT, ">> Total",">> avg") do |x|
                 a = x.report(">> for") { for i in 0..30 do @list.ordenar_seleccion end }

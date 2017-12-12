@@ -68,6 +68,6 @@ class Grupo_alimento < Alimento_
     end
     # Formatea la salida a texto
     def to_s
-        string = super.to_s# + "\t#{@group}"  
+        string = super.to_s + "\t#{@group}"  
     end
 end
