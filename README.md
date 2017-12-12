@@ -1,8 +1,8 @@
-# Práctica 10. Programación Funcional 
+# Práctica 11. Lenguaje de dominio específico 
 
 ## Carla Ramos Alonso
 
-Práctica 10 de la asignatura de Lenguajes y paradigmas de la programación.
+Práctica 11 de la asignatura de Lenguajes y paradigmas de la programación.
 En dicha práctica haremos uso de las prácticas anteriores, y utilizaremos la clase
 Alimento_ y List que en nuestro caso definen una lista doblemente enlazada de alimentos, que 
 a su vez pertenecen a un grupo, ya que hemos hecho uso de la herencia. 
@@ -20,7 +20,8 @@ __Benchmark:__ Informe de tiempo (banco de pruebas)
 __Coveralls:__ Devuelve el cubrimiento y las estadísticas del código Ruby desarrollado  
 
 Usaremos la metodología del **desarrollo dirigido por pruebas**, que consiste en la definición de las pruebas, con el resultado que esperamos, y luego la implementación del mínimo código necesario para el éxito de la misma.
-
+Los **DSL** son herramientas útiles que permiten expresar fácilmente la lógica específica de un problema particular
+(dominio) que de otro modo será difícil o farragoso de escribir en otro idioma. 
 ## Interpretación
 
 Para la interpretación del programa tendremos tan solo que modificar los ficheros de pruebas o clicar enter en la consola con la ejecución de guard, ya que este nos permite ver la ejecución de las pruebas cada vez que estas se modifiquen.
