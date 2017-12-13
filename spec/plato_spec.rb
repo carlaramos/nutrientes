@@ -60,6 +60,11 @@ RSpec.describe Plato do
         it "oils has to_s" do
            expect(@lentejas_arroz.oils[0][0].to_s).to eq("Aceite de oliva\t0.0\t0.2\t99.6")
         end
+        it "plato has to_s" do
+            expect(@lentejas_arroz.to_s).to eq("Lentejas con arroz, salsa de tomate, huevo y plátano a la plancha\n================================================================= \nComposición nutricional: \nTomate\t1.0\t3.5\t0.2\t990.0\nCalabaza\t1.1\t4.8\t0.1\t1225.0\nArroz\t6.8\t77.7\t0.6\t63529.0\nPlátano\t1.2\t21.4\t0.2\t1844.0\nLentejas\t23.5\t52.0\t1.4\t25168.0\nHuevo frito\t14.1\t0.0\t19.5\t15073.5\nAceite de oliva\t0.0\t0.2\t99.6\t6729.0\nValor energético:\t114558.5\n")
+        end
     end
+puts @lentejas_arroz
+    
     
 end

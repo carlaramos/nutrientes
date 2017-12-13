@@ -143,21 +143,21 @@ class Plato
 
        def to_s
             cadena = @name + "\n"
-            cadena += "\nComposición nutricional: \n"
+            cadena += "================================================================= \nComposición nutricional: \n"
             for i in 0..@vegetables.length-1 do
-                cadena += "%-25s\t%s\n" % [@vegetables[i][0].to_s, @vegetables[i][1].to_s]
+                cadena += "%s\t%s\n" % [@vegetables[i][0].to_s, @vegetables[i][1].to_s]
             end
             for i in 0..@cereals.length-1 do
-                cadena += "%-25s\t%s\n" % [@cereals[i][0].to_s, @cereals[i][1].to_s]
+                cadena += "%s\t%s\n" % [@cereals[i][0].to_s, @cereals[i][1].to_s]
             end
             for i in 0..@fruits.length-1 do
-                cadena += "%-25s\t%s\n" % [@fruits[i][0].to_s, @fruits[i][1].to_s]
+                cadena += "%s\t%s\n" % [@fruits[i][0].to_s, @fruits[i][1].to_s]
             end
             for i in 0..@proteins.length-1 do
-                cadena += "%-25s\t%s\n" % [@proteins[i][0].to_s, @proteins[i][1].to_s]
+                cadena += "%s\t%s\n" % [@proteins[i][0].to_s, @proteins[i][1].to_s]
             end
             for i in 0..@oils.length-1 do
-                cadena += "%-25s\t%s\n" % [@oils[i][0].to_s, @oils[i][1].to_s]
+                cadena += "%s\t%s\n" % [@oils[i][0].to_s, @oils[i][1].to_s]
             end
             cadena += "Valor energético:\t" + @valor_energetico.to_s + "\n"
             cadena
